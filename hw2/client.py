@@ -32,6 +32,9 @@ fileBuffer = file.read(fileSizeLimit)
 clientSocket.send(fileBuffer)
 file.close()
 
+# Get Server response
+print(clientSocket.recv(fileSizeLimit).decode('utf-8'))
+
 # Close connection
 print("Closing connection")
 clientSocket.shutdown(socket.SHUT_WR)

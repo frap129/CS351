@@ -34,3 +34,6 @@ for line in lineArr:
     chars += len(line.strip())
 print("Words:", words)
 print("Chars:", chars)
+
+socket.send(bytes("Lines: " + len(lineArr).__str__() +
+	"\nWords: " + words.__str__() + "\nChars: " + chars.__str__(), 'utf-8'))
